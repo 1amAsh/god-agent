@@ -1,0 +1,36 @@
+{
+  "agent_id": "app",
+  "name": "App Agent",
+  "description": "Autonomous Windows GUI automation agent. Controls desktop applications using the Windows Accessibility API (UIA) as primary method, with computer vision (screenshot) as fallback. Can launch apps, click elements, type text, navigate menus, and interact with any native Windows application. Cannot use the terminal, PowerShell, or system settings.",
+  "capabilities": [
+    "launch_any_app",
+    "accessibility_tree_reading",
+    "element_click_by_name",
+    "keyboard_input_and_hotkeys",
+    "menu_navigation",
+    "screenshot_vision_fallback",
+    "window_management",
+    "clipboard_access",
+    "browser_automation_via_gui"
+  ],
+  "routing_keywords": [
+    "open", "launch", "start", "close", "click", "type into", "gui",
+    "desktop", "application", "app", "window", "notepad", "chrome",
+    "excel", "word", "spotify", "discord", "zoom", "vscode", "paint",
+    "calculator", "screenshot", "automate", "control", "navigate"
+  ],
+  "blocked": [
+    "Registry Editor", "Command Prompt", "PowerShell", "Task Manager",
+    "Control Panel", "Windows Settings", "Device Manager", "Windows Defender"
+  ],
+  "input": {
+    "task": "natural language GUI task description",
+    "context": "optional — prior results to incorporate",
+    "metadata": {}
+  },
+  "output": {
+    "status": "success | fail | partial",
+    "result": "summary of what was accomplished on the desktop",
+    "next_hint": "optional — what the next agent should do"
+  }
+}

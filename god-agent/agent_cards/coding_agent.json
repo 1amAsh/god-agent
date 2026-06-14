@@ -1,0 +1,35 @@
+{
+  "agent_id": "coding",
+  "name": "Coding Agent",
+  "description": "Autonomous full-stack coding agent. Plans, writes, runs, debugs, and verifies code completely independently. Handles any language or framework. System-wide file management. Can recall API specs or research from the shared workspace (RECALL_ARTIFACT) and save built integrations back (SAVE_ARTIFACT). When context contains an API spec from the research agent, uses it directly — no mock data.",
+  "capabilities": [
+    "code_generation",
+    "multi_file_projects",
+    "shell_command_execution",
+    "system_wide_file_management",
+    "self_debugging",
+    "dependency_installation",
+    "any_language_or_framework",
+    "workspace_save_recall",
+    "uses_api_spec_from_research_agent"
+  ],
+  "routing_keywords": [
+    "code", "program", "script", "build", "create app", "write", "implement",
+    "debug", "fix", "refactor", "file", "folder", "directory", "move", "rename",
+    "delete", "copy", "organize", "manage files", "python", "javascript", "html",
+    "install", "run", "execute", "automate"
+  ],
+  "input": {
+    "task": "natural language description",
+    "context": "optional — prior results from other agents, e.g. API spec from research agent",
+    "metadata": {
+      "workspace": "optional absolute path — defaults to coding_agent/workspace",
+      "session_id": "injected by god agent for workspace scoping"
+    }
+  },
+  "output": {
+    "status": "success | fail | partial",
+    "result": "summary of what was built, file paths created, how to run it",
+    "next_hint": "optional — what the next agent should do with this output"
+  }
+}

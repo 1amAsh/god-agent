@@ -1,0 +1,29 @@
+# ── LLM Providers ──────────────────────────────────────────────────────
+groq>=0.9.0
+google-genai>=0.8.0
+openai>=1.30.0           # Used for OpenRouter + Ollama (both use OpenAI-compatible API)
+
+# ── Research Agent ─────────────────────────────────────────────────────
+requests>=2.32.0
+beautifulsoup4>=4.12.0   # cleaner HTML extraction
+duckduckgo-search>=6.0   # fallback when Serper key is absent
+
+# ── Dashboard ─────────────────────────────────────────────────────────
+flask>=3.0.0
+
+# ── Environment ────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── App Agent (Windows only) ───────────────────────────────────────────
+# Uncomment on Windows:
+# pywinauto>=0.6.8
+# Pillow>=10.0.0
+
+# ── Ollama (local fallback — free, unlimited) ──────────────────────────
+# No pip install needed — Ollama uses the openai package above.
+# Setup:
+#   1. Download Ollama from https://ollama.com
+#   2. ollama pull qwen2.5:1.5b       (main brain, ~900MB)
+#   3. ollama pull qwen2.5-coder:1.5b (coding tasks, ~900MB)
+#   4. ollama pull moondream           (vision/GUI, ~800MB)
+#   5. ollama serve                    (keep running in background)

@@ -1,0 +1,35 @@
+{
+  "agent_id": "research",
+  "name": "Research Agent",
+  "description": "Autonomous web research and scraping agent. Searches the web via Google (Serper API), fetches and reads full page content, triangulates multiple sources, synthesises comprehensive responses. Three modes: 'research' for deep multi-source investigation, 'scrape' for targeted data extraction, 'api_scout' for producing code-ready API integration specs. Can save research artifacts to shared workspace (SAVE_ARTIFACT) and recall prior research (RECALL_ARTIFACT) to avoid redundant work.",
+  "capabilities": [
+    "google_search_via_serper",
+    "full_page_content_fetching",
+    "multi_source_synthesis",
+    "real_time_web_data",
+    "api_discovery_and_spec_generation",
+    "structured_data_extraction",
+    "workspace_save_recall",
+    "source_citation"
+  ],
+  "routing_keywords": [
+    "research", "search", "find", "look up", "browse", "read", "summarize",
+    "analyze", "report", "news", "latest", "current", "today", "price",
+    "weather", "competitor", "information about", "what is", "who is",
+    "scrape", "extract data", "get data from", "open website", "visit",
+    "find api", "what api", "discover api", "live data for", "real-time"
+  ],
+  "input": {
+    "task": "natural language description of what to research or scrape",
+    "context": "optional — prior results to incorporate",
+    "metadata": {
+      "mode": "research | scrape | api_scout — defaults to research",
+      "session_id": "injected by god agent for workspace scoping"
+    }
+  },
+  "output": {
+    "status": "success | fail | partial",
+    "result": "the research output with source citations, or structured API spec",
+    "next_hint": "optional — what the next agent should do with this output"
+  }
+}
