@@ -1,5 +1,7 @@
 # JARVIS — Autonomous Multi-Agent Orchestrator
 
+### The main folder shown in the demo is god-agent (none of the zips... the zips are just what could have been my commits throughout the week).
+
 > Give JARVIS a goal in plain English. It figures out which of its agents to call, in what order — research finds real APIs, coding writes and runs real integrations, and the system remembers everything it builds. No hardcoding. No templates. One system that builds other projects.
 
 JARVIS is a local, autonomous multi-agent system built entirely on **free-tier LLM APIs**. Instead of being a single chatbot, it's an orchestrator ("god agent") that routes natural-language tasks to specialized agents — each running its own think → act → observe loop — and shares memory between them through a persistent workspace.
